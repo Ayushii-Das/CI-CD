@@ -10,6 +10,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
+                sh 'docker --version'
                 sh 'docker build -t devops-project:v1 .'
             }
         }
